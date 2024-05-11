@@ -1,0 +1,23 @@
+<h1>Register Page</h1>
+
+<form [formGroup]="registerForm">
+  <div>
+    <label for="">Email</label>
+    <input type="email" formControlName="email">
+  </div>
+  <div>
+    <label for="">Password</label>
+    <input type="password" formControlName="password">
+  </div>
+  <input type="radio" formControlName="page" value="page1">Page 1
+  <input type="radio" formControlName="page" value="page2">Page 2
+  <div>
+    <button type="submit">Register</button>
+  </div>
+</form>
+
+<h3>
+  <a routerLink="/login">Login Page</a>
+</h3>
+
+<p>Form value: {{ registerForm.value | json }}</p>

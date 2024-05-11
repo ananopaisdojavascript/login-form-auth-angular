@@ -1,0 +1,23 @@
+<h1>Login</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div>
+    <label for="">Email</label>
+    <input type="email" formControlName="email">
+  </div>
+  <div>
+    <label for="">Password</label>
+    <input type="password" formControlName="password">
+  </div>
+  <input type="radio" formControlName="page" value="page1">Page 1
+  <input type="radio" formControlName="page" value="page2">Page 2
+  <div>
+    <button type="submit">Login</button>
+  </div>
+</form>
+
+<h3>
+  <a routerLink="/register">Register Page</a>
+</h3>
+
+<p>Form value: {{ loginForm.value | json }}</p>
